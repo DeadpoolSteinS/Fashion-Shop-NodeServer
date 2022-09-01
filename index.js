@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 // IMPORTS FROM OTHER FILES
 const productRouter = require("./routes/product");
 const cartRouter = require("./routes/cart");
+const collectionRouter = require("./routes/collection");
 
 // INIT
 const PORT = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ const DB =
 app.use(express.json());
 app.use(productRouter);
 app.use(cartRouter);
+app.use(collectionRouter);
 
 // Connections
 mongoose
